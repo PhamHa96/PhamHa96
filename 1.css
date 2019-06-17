@@ -1,71 +1,73 @@
-*{margin:0;padding:0; }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .introdetail h2 {
-    font-size:  40px;
-    font-weight: 700;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .row.textintrodetail.text-center {
-    margin-left: -70px;
+  margin-left: -70px;
 }
 
 .introdetail .hoverintrodetail:hover {
-    transition: all ease 0.6s;
-    opacity: 1;
+  transition: all ease 0.6s;
+  opacity: 1;
 }
 
 .introdetail h3 {
-    border: 2px solid;
-    line-height: 160px;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    font-size: 38px;
+  border: 2px solid;
+  line-height: 160px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  font-size: 38px;
 }
 
 .introdetail .hoverintrodetail {
-    position:  absolute;
-    text-align:  center;
-    background: #e30073e8;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin-top: -170px;
-    color:  white;
-    opacity: 0;
-    transition: all ease 0.6s;
+  position: absolute;
+  text-align: center;
+  background: #e30073e8;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-top: -170px;
+  color: white;
+  opacity: 0;
+  transition: all ease 0.6s;
 }
 
 .introdetail .square {
-    position:  relative;
-    margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .introdetail h4 {
-    font-size: 21px;
-    margin-top: 28%;
+  font-size: 21px;
+  margin-top: 28%;
 }
 
 h2.textintro {
-    color:  ghostwhite;
-    font-size: 54px;
-    letter-spacing: 7px;
-    font-weight: 700;
+  color: ghostwhite;
+  font-size: 54px;
+  letter-spacing: 7px;
+  font-weight: 700;
 }
 
 h4.textintrosmall {
-    color: ghostwhite;
-    margin-top: 5%;
-    letter-spacing: 5px;
-    font-size: 21px;
+  color: ghostwhite;
+  margin-top: 5%;
+  letter-spacing: 5px;
+  font-size: 21px;
 }
 #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: 100%;
   min-height: 100%;
-
 }
 
 .detail h4 {
@@ -73,11 +75,11 @@ h4.textintrosmall {
 }
 
 .detail .advancedskills h4 {
-    margin-top: 90px;
+  margin-top: 90px;
 }
 
 .detail .adwards h4 {
-    margin-top: 169px;
+  margin-top: 169px;
 }
 
 .detail p {
@@ -85,8 +87,8 @@ h4.textintrosmall {
 }
 
 .singleimage {
-  position:  relative;
-  display:  block;
+  position: relative;
+  display: block;
   margin-bottom: 30px;
   transition: all ease 0.7s;
 }
@@ -98,29 +100,29 @@ h4.textintrosmall {
 }
 
 .fadecaption {
-  position:  absolute;
+  position: absolute;
   width: 94%;
   height: 100%;
   background: #e30073cf;
-  top:  0px;
+  top: 0px;
   left: 15px;
-  text-align:  center;
+  text-align: center;
   padding: 24%;
   font-size: 20px;
   opacity: 0;
-  cursor:  pointer;
+  cursor: pointer;
   transition: all 0.4s;
-  color:  white;
+  color: white;
   transform: translateY(-60px);
 }
 
 hr.vienduoi {
-  color:  white;
+  color: white;
 }
 
 .footer a {
   color: white;
-  text-decoration:  none;
+  text-decoration: none;
 }
 
 .footer .xahoi a {
@@ -128,8 +130,8 @@ hr.vienduoi {
   font-size: 35px;
   margin-left: 7px;
 }
-.footer .xahoi a :hover{
-  color:  #E30073;
+.footer .xahoi a :hover {
+  color: #e30073;
 }
 .footer .xahoi {
   margin-top: 20px;
@@ -139,7 +141,7 @@ hr.vienduoi {
   padding: 4% 0;
   background-color: #151212fa;
   color: white;
-  font-size:  15px;
+  font-size: 15px;
 }
 
 .detail {
@@ -149,70 +151,74 @@ hr.vienduoi {
 }
 
 .products {
-  background: url('images/bgdep.jpg');
+  background: url("images/bgdep.jpg");
   padding: 70px 0;
-  background-size:  cover;
-  color:  white;
-  background-attachment:  fixed;
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+  height: 600px;
 }
 
 .products .imagegroup.bienra {
-  opacity:  1;
+  opacity: 1;
   transform: translateX(0px);
 }
 
-.products .imagegroup{
+.products .imagegroup {
   transition: all ease 0.8s;
   transform: translateX(-100px);
   opacity: 0;
 }
+.products .newproduct {
+  padding: 60px 0;
+}
 /* class xuat hien cac phan tu animation */
-.detail .text_title.start{
+.detail .text_title.start {
   opacity: 1;
   animation-duration: 2.5s;
 }
-.introdetail .text_title.start{
+.introdetail .text_title.start {
   opacity: 1;
   animation-duration: 2.5s;
 }
-.detail .text_title{
+.detail .text_title {
   opacity: 0;
 }
-.detail .text{
+.detail .text {
   opacity: 0;
 }
-.introdetail .text_title{
+.introdetail .text_title {
   opacity: 0;
 }
-.detail .text.start{
+.detail .text.start {
   opacity: 1;
   animation-duration: 2.5s;
 }
-.contact .title{
+.contact .title {
   opacity: 0;
 }
-.contact .title.start{
+.contact .title.start {
   opacity: 1;
   animation-duration: 2.5s;
 }
-.contact .groupcontact{
+.contact .groupcontact {
   opacity: 0;
 }
-.contact .groupcontact.start{
+.contact .groupcontact.start {
   opacity: 1;
   animation-duration: 2.5s;
 }
-.introdetail .square{
+.introdetail .square {
   opacity: 0;
 }
-.introdetail .square.start{
+.introdetail .square.start {
   opacity: 1;
   animation-duration: 2.5s;
 }
 a.btn.btn-default.viewmoreitem {
   margin-top: 32px;
   font-size: 18px;
-  font-weight:  500;
+  font-weight: 500;
 }
 
 img.img-responsive.img-circle {
@@ -238,32 +244,33 @@ audio.music {
   text-shadow: 1px 0px #adadad;
 }
 
-
 .navbar-default .navbar-nav > li > a {
-  color:  white;
+  color: white;
   font-size: 19px;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
   color: white;
-  background: #E30073;
+  background: #e30073;
 }
 
-body{
-  font-family: 'Teko', sans-serif;
+body {
+  font-family: "Teko", sans-serif;
   font-weight: 10;
 }
 
 .introdetail {
-    padding: 7%;
-    font-size: 18px;
-    background: url('images/webbg.jpg');
-    color: ghostwhite;
-    background-attachment:  fixed;
+  padding: 7%;
+  font-size: 18px;
+  background: url("images/webbg.jpg");
+  color: ghostwhite;
+  background-attachment: fixed;
 }
 
 .introdetail p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 hr {
@@ -275,10 +282,10 @@ hr {
 .intro {
   background: url("images/bg.jpg");
   background-size: cover;
-  width:  100%;
+  width: 100%;
   height: 100%;
   padding: 7% 0;
-  background-attachment:  fixed;
+  background-attachment: fixed;
 }
 
 hr.linebelow {
@@ -294,53 +301,52 @@ hr.linebelow {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: #E30073;
+  color: #e30073;
 }
 
 /*Contact  ____*/
-.content-header{
-  font-family: 'Oleo Script', cursive;
-  color:#fcc500;
+.content-header {
+  font-family: "Oleo Script", cursive;
+  color: #fcc500;
   font-size: 45px;
 }
 
-.section-content{
-  text-align: center; 
-
+.section-content {
+  text-align: center;
 }
 #contact {
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   padding-top: 30px;
   padding-bottom: 60px;
   width: 100%;
   width: 100vw;
   height: 100%;
   background: #3a6186;
-  background: -webkit-linear-gradient(to left, #3a6186 , #89253e);
-  background: linear-gradient(to left, #3a6186 , #89253e);
+  background: -webkit-linear-gradient(to left, #3a6186, #89253e);
+  background: linear-gradient(to left, #3a6186, #89253e);
   color: #fff;
 }
-.contact-section{
+.contact-section {
   padding-top: 40px;
 }
- /*
+/*
  .contact-section .col-md-6{
   width: 50%;
 }
  */
-.form-line{
-  border-right: 1px solid #B29999;
+.form-line {
+  border-right: 1px solid #b29999;
 }
 
-.form-group{
+.form-group {
   margin-top: 10px;
 }
-label{
+label {
   font-size: 1.3em;
   line-height: 1em;
   font-weight: normal;
 }
-.form-control{
+.form-control {
   font-size: 1.3em;
   color: #080808;
   margin-bottom: 7%;
@@ -350,7 +356,7 @@ textarea.form-control {
   /* margin-top: px;*/
 }
 
-.submit{
+.submit {
   font-size: 1.1em;
   float: right;
   width: 150px;
@@ -359,26 +365,25 @@ textarea.form-control {
   margin-bottom: 15px;
 }
 
-.submit:hover
-{
-  color: #E30073;
+.submit:hover {
+  color: #e30073;
   background-color: none;
 }
-.navbar-default .navbar-brand{
+.navbar-default .navbar-brand {
   color: white;
   font-size: 25px;
   font-weight: 500;
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #E30073;
+  color: #e30073;
 }
 
 nav.navbar.navbar-default.tienhoa:hover {
-  color: #E30073;
+  color: #e30073;
 }
 nav.navbar.navbar-default {
-  background:#f5deb300;
+  background: #f5deb300;
   margin-bottom: 0;
   border: none;
   border-radius: 0;
@@ -387,23 +392,22 @@ nav.navbar.navbar-default {
 
 nav.navbar.navbar-default.tienhoa {
   opacity: 0.85;
-  background: linear-gradient(to left, #3a6186 , #89253e);
+  background: linear-gradient(to left, #3a6186, #89253e);
   transform: translateY(0px);
   transition: all ease 0.8s;
 }
 
-
 /* quote */
 .quote {
-  font-family: 'Amatic SC', sans-serif;
+  font-family: "Amatic SC", sans-serif;
   font-size: 100px;
   line-height: 40vh;
   background: url(images/purple-galaxy.jpg);
   color: #fff;
   height: 100%;
-  font-family: 'Amatic SC', sans-serif;
+  font-family: "Amatic SC", sans-serif;
   background-size: cover;
-  background-attachment:  fixed;
+  background-attachment: fixed;
   padding: 7% 0;
 }
 .test {
@@ -475,51 +479,46 @@ p {
   }
 }
 
-.box {  
+.box {
+  cursor: pointer;
+  height: 168px;
+  float: left;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  width: 168px;
+}
 
-  cursor: pointer;  
-  height: 168px;  
-  float: left;  
-  margin: 5px;  
-  position: relative;  
-  overflow: hidden;  
-  width: 168px;  
-  
-}  
+.box img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
 
-.box img {  
-  position: absolute;  
-  left: 0;  
-  -webkit-transition: all 300ms ease-out;  
-  -moz-transition: all 300ms ease-out;  
-  -o-transition: all 300ms ease-out;  
-  -ms-transition: all 300ms ease-out;  
-  transition: all 300ms ease-out;  
-}  
-
-
-.box .caption {  
+.box .caption {
   font-family: Tahoma;
-  font-size: .5em;
-  background-color: rgba(0,0,0,0.8);  
-  position: absolute;  
-  color: #fff;  
-  z-index: 100;  
-  -webkit-transition: all 300ms ease-out;  
-  -moz-transition: all 300ms ease-out;  
-  -o-transition: all 300ms ease-out;  
-  -ms-transition: all 300ms ease-out;  
-  transition: all 300ms ease-out;  
-  left: 0;  
-  opacity: 0;  
-  width: 150px;  
-  height: 150px;  
-  text-align: left;  
+  font-size: 0.5em;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  color: #fff;
+  z-index: 100;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  left: 0;
+  opacity: 0;
+  width: 150px;
+  height: 150px;
+  text-align: left;
   padding: 15px;
-}  
+}
 
-
-
-.box:hover .fade-caption {  
-  opacity: 1;  
-}  
+.box:hover .fade-caption {
+  opacity: 1;
+}
