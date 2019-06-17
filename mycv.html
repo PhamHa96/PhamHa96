@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,22 +8,686 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="vendor/bootstrap.js"></script>
-	<script type="text/javascript" src="1.js"></script>
-	<script type="text/javascript" src="script.js"></script>
 	<link rel="stylesheet" href="vendor/bootstrap.css">
 
-	<link rel="stylesheet" href="1.css">
 	<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 
-	<link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css”> <link
+	<link rel=�stylesheet� href=�https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css�> <link
 		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"
 		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
 
+		.introdetail h2 {
+			font-size: 40px;
+			font-weight: 700;
+		}
+
+		.row.textintrodetail.text-center {
+			margin-left: -70px;
+		}
+
+		.introdetail .hoverintrodetail:hover {
+			transition: all ease 0.6s;
+			opacity: 1;
+		}
+
+		.introdetail h3 {
+			border: 2px solid;
+			line-height: 160px;
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			font-size: 38px;
+		}
+
+		.introdetail .hoverintrodetail {
+			position: absolute;
+			text-align: center;
+			background: #e30073e8;
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			margin-top: -170px;
+			color: white;
+			opacity: 0;
+			transition: all ease 0.6s;
+		}
+
+		.introdetail .square {
+			position: relative;
+			margin-bottom: 20px;
+		}
+
+		.introdetail h4 {
+			font-size: 21px;
+			margin-top: 28%;
+		}
+
+		h2.textintro {
+			color: ghostwhite;
+			font-size: 54px;
+			letter-spacing: 7px;
+			font-weight: 700;
+		}
+
+		h4.textintrosmall {
+			color: ghostwhite;
+			margin-top: 5%;
+			letter-spacing: 5px;
+			font-size: 21px;
+		}
+
+		#myVideo {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+
+		}
+
+		.detail h4 {
+			font-size: 20px;
+		}
+
+		.detail .advancedskills h4 {
+			margin-top: 90px;
+		}
+
+		.detail .adwards h4 {
+			margin-top: 169px;
+		}
+
+		.detail p {
+			font-size: 18px;
+		}
+
+		.singleimage {
+			position: relative;
+			display: block;
+			margin-bottom: 30px;
+			transition: all ease 0.7s;
+		}
+
+		.singleimage:hover .fadecaption {
+			opacity: 1;
+			transition: all ease 0.7s;
+			transform: translateY(0px);
+		}
+
+		.fadecaption {
+			position: absolute;
+			width: 94%;
+			height: 100%;
+			background: #e30073cf;
+			top: 0px;
+			left: 15px;
+			text-align: center;
+			padding: 24%;
+			font-size: 20px;
+			opacity: 0;
+			cursor: pointer;
+			transition: all 0.4s;
+			color: white;
+			transform: translateY(-60px);
+		}
+
+		hr.vienduoi {
+			color: white;
+		}
+
+		.footer a {
+			color: white;
+			text-decoration: none;
+		}
+
+		.footer .xahoi a {
+			color: white;
+			font-size: 35px;
+			margin-left: 7px;
+		}
+
+		.footer .xahoi a :hover {
+			color: #E30073;
+		}
+
+		.footer .xahoi {
+			margin-top: 20px;
+		}
+
+		.footer {
+			padding: 4% 0;
+			background-color: #151212fa;
+			color: white;
+			font-size: 15px;
+		}
+
+		.detail {
+			padding: 70px 0;
+			background: #3b96c2;
+			color: #ffffff;
+		}
+
+		.products {
+			background: url('images/bgdep.jpg');
+			padding: 70px 0;
+			background-size: cover;
+			color: white;
+			background-attachment: fixed;
+		}
+
+		.products .imagegroup.bienra {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+
+		.products .imagegroup {
+			transition: all ease 0.8s;
+			transform: translateX(-100px);
+			opacity: 0;
+		}
+
+		/* class xuat hien cac phan tu animation */
+		.detail .text_title.start {
+			opacity: 1;
+			animation-duration: 2.5s;
+		}
+
+		.introdetail .text_title.start {
+			opacity: 1;
+			animation-duration: 2.5s;
+		}
+
+		.detail .text_title {
+			opacity: 0;
+		}
+
+		.detail .text {
+			opacity: 0;
+		}
+
+		.introdetail .text_title {
+			opacity: 0;
+		}
+
+		.detail .text.start {
+			opacity: 1;
+			animation-duration: 2.5s;
+		}
+
+		.contact .title {
+			opacity: 0;
+		}
+
+		.contact .title.start {
+			opacity: 1;
+			animation-duration: 2.5s;
+		}
+
+		.contact .groupcontact {
+			opacity: 0;
+		}
+
+		.contact .groupcontact.start {
+			opacity: 1;
+			animation-duration: 2.5s;
+		}
+
+		.introdetail .square {
+			opacity: 0;
+		}
+
+		.introdetail .square.start {
+			opacity: 1;
+			animation-duration: 2.5s;
+		}
+
+		a.btn.btn-default.viewmoreitem {
+			margin-top: 32px;
+			font-size: 18px;
+			font-weight: 500;
+		}
+
+		img.img-responsive.img-circle {
+			padding: 24px;
+		}
+
+		audio.music {
+			margin-top: 30px;
+		}
+
+		.info .textinfo {
+			padding-left: 10%;
+			padding-top: 5%;
+			padding-bottom: 3%;
+			border: 1px solid white;
+			margin-left: 0px;
+		}
+
+		.info .textinfo p {
+			margin-bottom: 18px;
+			font-size: 20px;
+			color: white;
+			text-shadow: 1px 0px #adadad;
+		}
+
+
+		.navbar-default .navbar-nav>li>a {
+			color: white;
+			font-size: 19px;
+		}
+
+		.navbar-default .navbar-nav>.active>a,
+		.navbar-default .navbar-nav>.active>a:hover,
+		.navbar-default .navbar-nav>.active>a:focus {
+			color: white;
+			background: #E30073;
+		}
+
+		body {
+			font-family: 'Teko', sans-serif;
+			font-weight: 10;
+		}
+
+		.introdetail {
+			padding: 7%;
+			font-size: 18px;
+			background: url('images/webbg.jpg');
+			color: ghostwhite;
+			background-attachment: fixed;
+		}
+
+		.introdetail p {
+			font-size: 18px;
+		}
+
+		hr {
+			color: #ffffff;
+		}
+
+		/* .products img.img-responsive {margin-bottom: 22px;} */
+
+		.intro {
+			background: url("images/bg.jpg");
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			padding: 7% 0;
+			background-attachment: fixed;
+		}
+
+		hr.linebelow {
+			width: 100%;
+			margin-bottom: 5%;
+		}
+
+		.title h3 {
+			font-size: 40px;
+			font-weight: 700;
+			margin-top: 0;
+			color: white;
+		}
+
+		.navbar-default .navbar-nav>li>a:hover {
+			color: #E30073;
+		}
+
+		/*Contact  ____*/
+		.content-header {
+			font-family: 'Oleo Script', cursive;
+			color: #fcc500;
+			font-size: 45px;
+		}
+
+		.section-content {
+			text-align: center;
+
+		}
+
+		#contact {
+			font-family: 'Teko', sans-serif;
+			padding-top: 30px;
+			padding-bottom: 60px;
+			width: 100%;
+			width: 100vw;
+			height: 100%;
+			background: #3a6186;
+			background: -webkit-linear-gradient(to left, #3a6186, #89253e);
+			background: linear-gradient(to left, #3a6186, #89253e);
+			color: #fff;
+		}
+
+		.contact-section {
+			padding-top: 40px;
+		}
+
+		/*
+ .contact-section .col-md-6{
+  width: 50%;
+}
+ */
+		.form-line {
+			border-right: 1px solid #B29999;
+		}
+
+		.form-group {
+			margin-top: 10px;
+		}
+
+		label {
+			font-size: 1.3em;
+			line-height: 1em;
+			font-weight: normal;
+		}
+
+		.form-control {
+			font-size: 1.3em;
+			color: #080808;
+			margin-bottom: 7%;
+		}
+
+		textarea.form-control {
+			height: 135px;
+			/* margin-top: px;*/
+		}
+
+		.submit {
+			font-size: 1.1em;
+			float: right;
+			width: 150px;
+			background-color: transparent;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+
+		.submit:hover {
+			color: #E30073;
+			background-color: none;
+		}
+
+		.navbar-default .navbar-brand {
+			color: white;
+			font-size: 25px;
+			font-weight: 500;
+		}
+
+		.navbar-default .navbar-brand:hover {
+			color: #E30073;
+		}
+
+		nav.navbar.navbar-default.tienhoa:hover {
+			color: #E30073;
+		}
+
+		nav.navbar.navbar-default {
+			background: #f5deb300;
+			margin-bottom: 0;
+			border: none;
+			border-radius: 0;
+			transition: all ease 0.8s;
+		}
+
+		nav.navbar.navbar-default.tienhoa {
+			opacity: 0.85;
+			background: linear-gradient(to left, #3a6186, #89253e);
+			transform: translateY(0px);
+			transition: all ease 0.8s;
+		}
+
+
+		/* quote */
+		.quote {
+			font-family: 'Amatic SC', sans-serif;
+			font-size: 100px;
+			line-height: 40vh;
+			background: url(images/purple-galaxy.jpg);
+			color: #fff;
+			height: 100%;
+			font-family: 'Amatic SC', sans-serif;
+			background-size: cover;
+			background-attachment: fixed;
+			padding: 7% 0;
+		}
+
+		.test {
+			-webkit-animation: squiggly-anim 0.34s linear infinite;
+			animation: squiggly-anim 0.34s linear infinite;
+		}
+
+		.test {
+			display: inline-block;
+			vertical-align: middle;
+			width: 100%;
+			outline: none;
+			text-align: center;
+			line-height: 1;
+			margin-top: 12%;
+		}
+
+		.small {
+			font-size: 0.5em;
+			margin-bottom: 3%;
+		}
+
+		.smaller {
+			font-size: 0.4em;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		@-webkit-keyframes squiggly-anim {
+			0% {
+				-webkit-filter: url("#squiggly-0");
+				filter: url("#squiggly-0");
+			}
+
+			25% {
+				-webkit-filter: url("#squiggly-1");
+				filter: url("#squiggly-1");
+			}
+
+			50% {
+				-webkit-filter: url("#squiggly-2");
+				filter: url("#squiggly-2");
+			}
+
+			75% {
+				-webkit-filter: url("#squiggly-3");
+				filter: url("#squiggly-3");
+			}
+
+			100% {
+				-webkit-filter: url("#squiggly-4");
+				filter: url("#squiggly-4");
+			}
+		}
+
+		@keyframes squiggly-anim {
+			0% {
+				-webkit-filter: url("#squiggly-0");
+				filter: url("#squiggly-0");
+			}
+
+			25% {
+				-webkit-filter: url("#squiggly-1");
+				filter: url("#squiggly-1");
+			}
+
+			50% {
+				-webkit-filter: url("#squiggly-2");
+				filter: url("#squiggly-2");
+			}
+
+			75% {
+				-webkit-filter: url("#squiggly-3");
+				filter: url("#squiggly-3");
+			}
+
+			100% {
+				-webkit-filter: url("#squiggly-4");
+				filter: url("#squiggly-4");
+			}
+		}
+
+		.box {
+
+			cursor: pointer;
+			height: 168px;
+			float: left;
+			margin: 5px;
+			position: relative;
+			overflow: hidden;
+			width: 168px;
+
+		}
+
+		.box img {
+			position: absolute;
+			left: 0;
+			-webkit-transition: all 300ms ease-out;
+			-moz-transition: all 300ms ease-out;
+			-o-transition: all 300ms ease-out;
+			-ms-transition: all 300ms ease-out;
+			transition: all 300ms ease-out;
+		}
+
+
+		.box .caption {
+			font-family: Tahoma;
+			font-size: .5em;
+			background-color: rgba(0, 0, 0, 0.8);
+			position: absolute;
+			color: #fff;
+			z-index: 100;
+			-webkit-transition: all 300ms ease-out;
+			-moz-transition: all 300ms ease-out;
+			-o-transition: all 300ms ease-out;
+			-ms-transition: all 300ms ease-out;
+			transition: all 300ms ease-out;
+			left: 0;
+			opacity: 0;
+			width: 150px;
+			height: 150px;
+			text-align: left;
+			padding: 15px;
+		}
+
+
+		.box:hover .fade-caption {
+			opacity: 1;
+		}
+	</style>
+	<script>
+		$(function () {
+			$('.n1').click(function () {
+				$('html').animate({ scrollTop: $('#intro').offset().top });
+				return false;
+			})
+			$('.n2').click(function () {
+				$('html').animate({ scrollTop: $('#detail').offset().top });
+				return false;
+			})
+
+
+			$('.n3').click(function () {
+				$('html').animate({ scrollTop: $('#products').offset().top });
+				return false;
+			})
+			$('.n4').click(function () {
+				$('html').animate({ scrollTop: $('#contact').offset().top });
+				return false;
+			})
+			$('.n5').click(function () {
+				$('html').animate({ scrollTop: $('#quote').offset().top });
+				return false;
+			})
+			/*$('.n1').click(function(){
+				$('body').animate({scrollTop:$('#intro').offset().top},2000,"easeInOutExpo");
+				return false; 
+			})
+			$('.n2').click(function(){
+				$('body').animate({scrollTop:$('#detail').offset().top},2000,"easeInOutExpo");
+				return false; 
+			})
+		
+			$('.n3').click(function(){
+				$('body').animate({scrollTop:$('#products').offset().top},2000,"easeInOutExpo");
+				return false; 
+			})*/
+			$(window).scroll(function () {
+
+				vitrihientai = $("html").scrollTop();
+				console.log(vitrihientai);
+
+				if (vitrihientai > 100) {
+					$('.navbar-fixed-top').addClass('tienhoa');
+				}
+				else if (vitrihientai < 100) {
+					$('.navbar-fixed-top').removeClass('tienhoa');
+				}
+
+
+				// mo rong 
+				if (vitrihientai >= 1800) {
+					$('.products .imagegroup').addClass('bienra');
+				}
+				else if (vitrihientai < 1800) {
+					$('.products .imagegroup').removeClass('bienra');
+				}
+
+				if (vitrihientai >= 1100) {
+					$('.detail .text_title').addClass('start animated bounceInRight');
+				}
+				else if (vitrihientai < 1100) {
+					$('.detail .text_title').removeClass('start animated bounceInRight');
+				}
+
+				if (vitrihientai >= 1200) {
+					$('.detail .text').addClass('start animated bounceInUp');
+				}
+				else if (vitrihientai < 1200) {
+					$('.detail .text').removeClass('start animated bounceInUp');
+				}
+
+				if (vitrihientai >= 2700) {
+					$('.contact .title').addClass('start animated bounceInRight');
+				}
+				else if (vitrihientai < 2700) {
+					$('.contact .title').removeClass('start animated bounceInRight');
+				}
+				if (vitrihientai >= 2900) {
+					$('.contact .groupcontact').addClass('start animated bounceInUp');
+				}
+				else if (vitrihientai < 2900) {
+					$('.contact .groupcontact').removeClass('start animated bounceInUp');
+				}
+				if (vitrihientai >= 600) {
+					$('.introdetail .text_title').addClass('start animated bounceInRight');
+				}
+				else if (vitrihientai < 600) {
+					$('.introdetail .text_title').removeClass('start animated bounceInRight');
+				}
+				if (vitrihientai >= 700) {
+					$('.introdetail .square').addClass('start animated bounceInUp');
+				}
+				else if (vitrihientai < 700) {
+					$('.introdetail .square').removeClass('start animated bounceInUp');
+				}
+
+			})
+		})
+	</script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="50">
@@ -329,8 +995,8 @@
 
 			<p class="small"> My Quote: </p>
 
-			<p class="smaller">" Life isn’t about waiting for the storm to pass.</p>
-			<p class="smaller">It’s about learning to dance in the rain."</p>
+			<p class="smaller">" Life isn�t about waiting for the storm to pass.</p>
+			<p class="smaller">It�s about learning to dance in the rain."</p>
 		</div>
 		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 			<defs>
@@ -380,11 +1046,11 @@
 								aria-hidden="true"></i></a>
 						<a href="https://www.facebook.com/phamha123456"><i class="fa fa-facebook-square"
 								aria-hidden="true"></i></a>
-						<a href="https://www.facebook.com/phamha123456"><i class="fa fa-instagram"
+						<a href="https://www.instagram.com/ha_pham96"><i class="fa fa-instagram"
 								aria-hidden="true"></i></a>
 					</div>
 					<hr class="vienduoi">
-					<p>Copyright © Thai Ha 2017</p>
+					<p>Copyright � Thai Ha 2017</p>
 				</div>
 			</div> <!-- enrow -->
 		</div>
